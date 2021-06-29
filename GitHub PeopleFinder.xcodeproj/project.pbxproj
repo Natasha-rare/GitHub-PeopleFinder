@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12F9A99626884FE10078F5F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9A99526884FE10078F5F2 /* AppDelegate.swift */; };
+		12F9A99826884FE10078F5F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9A99726884FE10078F5F2 /* SceneDelegate.swift */; };
+		12F9A99A26884FE10078F5F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9A99926884FE10078F5F2 /* ViewController.swift */; };
+		12F9A99D26884FE10078F5F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12F9A99B26884FE10078F5F2 /* Main.storyboard */; };
+		12F9A99F26884FE20078F5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F9A99E26884FE20078F5F2 /* Assets.xcassets */; };
+		12F9A9A226884FE20078F5F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12F9A9A026884FE20078F5F2 /* LaunchScreen.storyboard */; };
+		12F9A9AD26884FE20078F5F2 /* GitHub_PeopleFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9A9AC26884FE20078F5F2 /* GitHub_PeopleFinderTests.swift */; };
+		12F9A9B826884FE20078F5F2 /* GitHub_PeopleFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9A9B726884FE20078F5F2 /* GitHub_PeopleFinderUITests.swift */; };
+		12F9A9C62688A8EF0078F5F2 /* ResultsShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9A9C52688A8EF0078F5F2 /* ResultsShowController.swift */; };
+		12F9A9C82689C3EE0078F5F2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9A9C72689C3EE0078F5F2 /* User.swift */; };
+		12F9A9CA2689C7570078F5F2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9A9C92689C7570078F5F2 /* Repository.swift */; };
+		12F9A9CC268B0CC50078F5F2 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9A9CB268B0CC50078F5F2 /* SpinnerViewController.swift */; };
+		12F9A9CE268B35E20078F5F2 /* ReposTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9A9CD268B35E20078F5F2 /* ReposTableViewCell.swift */; };
+		12F9A9D0268B3DD30078F5F2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9A9CF268B3DD30078F5F2 /* Extension.swift */; };
+		FC4C6F437AA5B8216F4624FB /* Pods_GitHub_PeopleFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7D61596D0112D8B109C43C /* Pods_GitHub_PeopleFinder.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		12F9A9A926884FE20078F5F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12F9A98A26884FE10078F5F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12F9A99126884FE10078F5F2;
+			remoteInfo = "GitHub PeopleFinder";
+		};
+		12F9A9B426884FE20078F5F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12F9A98A26884FE10078F5F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12F9A99126884FE10078F5F2;
+			remoteInfo = "GitHub PeopleFinder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12F9A99226884FE10078F5F2 /* GitHub PeopleFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub PeopleFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12F9A99526884FE10078F5F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		12F9A99726884FE10078F5F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		12F9A99926884FE10078F5F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12F9A99C26884FE10078F5F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		12F9A99E26884FE20078F5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		12F9A9A126884FE20078F5F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		12F9A9A326884FE20078F5F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12F9A9A826884FE20078F5F2 /* GitHub PeopleFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GitHub PeopleFinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12F9A9AC26884FE20078F5F2 /* GitHub_PeopleFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub_PeopleFinderTests.swift; sourceTree = "<group>"; };
+		12F9A9AE26884FE20078F5F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12F9A9B326884FE20078F5F2 /* GitHub PeopleFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GitHub PeopleFinderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12F9A9B726884FE20078F5F2 /* GitHub_PeopleFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub_PeopleFinderUITests.swift; sourceTree = "<group>"; };
+		12F9A9B926884FE20078F5F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12F9A9C52688A8EF0078F5F2 /* ResultsShowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsShowController.swift; sourceTree = "<group>"; };
+		12F9A9C72689C3EE0078F5F2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		12F9A9C92689C7570078F5F2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		12F9A9CB268B0CC50078F5F2 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		12F9A9CD268B35E20078F5F2 /* ReposTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposTableViewCell.swift; sourceTree = "<group>"; };
+		12F9A9CF268B3DD30078F5F2 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		3455B1F238166DCFCCB4FAC8 /* Pods-GitHub PeopleFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub PeopleFinder.release.xcconfig"; path = "Target Support Files/Pods-GitHub PeopleFinder/Pods-GitHub PeopleFinder.release.xcconfig"; sourceTree = "<group>"; };
+		3F8FEE88537E7C7EDB97C7FC /* Pods-GitHub PeopleFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub PeopleFinder.debug.xcconfig"; path = "Target Support Files/Pods-GitHub PeopleFinder/Pods-GitHub PeopleFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		CF7D61596D0112D8B109C43C /* Pods_GitHub_PeopleFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_PeopleFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		12F9A98F26884FE10078F5F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC4C6F437AA5B8216F4624FB /* Pods_GitHub_PeopleFinder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12F9A9A526884FE20078F5F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12F9A9B026884FE20078F5F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12F9A98926884FE10078F5F2 = {
+			isa = PBXGroup;
+			children = (
+				12F9A99426884FE10078F5F2 /* GitHub PeopleFinder */,
+				12F9A9AB26884FE20078F5F2 /* GitHub PeopleFinderTests */,
+				12F9A9B626884FE20078F5F2 /* GitHub PeopleFinderUITests */,
+				12F9A99326884FE10078F5F2 /* Products */,
+				57AE2998CECE13A617D545E2 /* Pods */,
+				2425E62223AB92C3D961BF43 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		12F9A99326884FE10078F5F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12F9A99226884FE10078F5F2 /* GitHub PeopleFinder.app */,
+				12F9A9A826884FE20078F5F2 /* GitHub PeopleFinderTests.xctest */,
+				12F9A9B326884FE20078F5F2 /* GitHub PeopleFinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		12F9A99426884FE10078F5F2 /* GitHub PeopleFinder */ = {
+			isa = PBXGroup;
+			children = (
+				12F9A99526884FE10078F5F2 /* AppDelegate.swift */,
+				12F9A99726884FE10078F5F2 /* SceneDelegate.swift */,
+				12F9A99926884FE10078F5F2 /* ViewController.swift */,
+				12F9A99B26884FE10078F5F2 /* Main.storyboard */,
+				12F9A99E26884FE20078F5F2 /* Assets.xcassets */,
+				12F9A9A026884FE20078F5F2 /* LaunchScreen.storyboard */,
+				12F9A9A326884FE20078F5F2 /* Info.plist */,
+				12F9A9C52688A8EF0078F5F2 /* ResultsShowController.swift */,
+				12F9A9C72689C3EE0078F5F2 /* User.swift */,
+				12F9A9C92689C7570078F5F2 /* Repository.swift */,
+				12F9A9CB268B0CC50078F5F2 /* SpinnerViewController.swift */,
+				12F9A9CD268B35E20078F5F2 /* ReposTableViewCell.swift */,
+				12F9A9CF268B3DD30078F5F2 /* Extension.swift */,
+			);
+			path = "GitHub PeopleFinder";
+			sourceTree = "<group>";
+		};
+		12F9A9AB26884FE20078F5F2 /* GitHub PeopleFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				12F9A9AC26884FE20078F5F2 /* GitHub_PeopleFinderTests.swift */,
+				12F9A9AE26884FE20078F5F2 /* Info.plist */,
+			);
+			path = "GitHub PeopleFinderTests";
+			sourceTree = "<group>";
+		};
+		12F9A9B626884FE20078F5F2 /* GitHub PeopleFinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				12F9A9B726884FE20078F5F2 /* GitHub_PeopleFinderUITests.swift */,
+				12F9A9B926884FE20078F5F2 /* Info.plist */,
+			);
+			path = "GitHub PeopleFinderUITests";
+			sourceTree = "<group>";
+		};
+		2425E62223AB92C3D961BF43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF7D61596D0112D8B109C43C /* Pods_GitHub_PeopleFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57AE2998CECE13A617D545E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F8FEE88537E7C7EDB97C7FC /* Pods-GitHub PeopleFinder.debug.xcconfig */,
+				3455B1F238166DCFCCB4FAC8 /* Pods-GitHub PeopleFinder.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		12F9A99126884FE10078F5F2 /* GitHub PeopleFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12F9A9BC26884FE20078F5F2 /* Build configuration list for PBXNativeTarget "GitHub PeopleFinder" */;
+			buildPhases = (
+				C30DDC5A6EEDB6B8F62343C4 /* [CP] Check Pods Manifest.lock */,
+				12F9A98E26884FE10078F5F2 /* Sources */,
+				12F9A98F26884FE10078F5F2 /* Frameworks */,
+				12F9A99026884FE10078F5F2 /* Resources */,
+				AB5340AEF9D8C7D5E806DEDA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GitHub PeopleFinder";
+			productName = "GitHub PeopleFinder";
+			productReference = 12F9A99226884FE10078F5F2 /* GitHub PeopleFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		12F9A9A726884FE20078F5F2 /* GitHub PeopleFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12F9A9BF26884FE20078F5F2 /* Build configuration list for PBXNativeTarget "GitHub PeopleFinderTests" */;
+			buildPhases = (
+				12F9A9A426884FE20078F5F2 /* Sources */,
+				12F9A9A526884FE20078F5F2 /* Frameworks */,
+				12F9A9A626884FE20078F5F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12F9A9AA26884FE20078F5F2 /* PBXTargetDependency */,
+			);
+			name = "GitHub PeopleFinderTests";
+			productName = "GitHub PeopleFinderTests";
+			productReference = 12F9A9A826884FE20078F5F2 /* GitHub PeopleFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		12F9A9B226884FE20078F5F2 /* GitHub PeopleFinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12F9A9C226884FE20078F5F2 /* Build configuration list for PBXNativeTarget "GitHub PeopleFinderUITests" */;
+			buildPhases = (
+				12F9A9AF26884FE20078F5F2 /* Sources */,
+				12F9A9B026884FE20078F5F2 /* Frameworks */,
+				12F9A9B126884FE20078F5F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12F9A9B526884FE20078F5F2 /* PBXTargetDependency */,
+			);
+			name = "GitHub PeopleFinderUITests";
+			productName = "GitHub PeopleFinderUITests";
+			productReference = 12F9A9B326884FE20078F5F2 /* GitHub PeopleFinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		12F9A98A26884FE10078F5F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					12F9A99126884FE10078F5F2 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					12F9A9A726884FE20078F5F2 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 12F9A99126884FE10078F5F2;
+					};
+					12F9A9B226884FE20078F5F2 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 12F9A99126884FE10078F5F2;
+					};
+				};
+			};
+			buildConfigurationList = 12F9A98D26884FE10078F5F2 /* Build configuration list for PBXProject "GitHub PeopleFinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 12F9A98926884FE10078F5F2;
+			productRefGroup = 12F9A99326884FE10078F5F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				12F9A99126884FE10078F5F2 /* GitHub PeopleFinder */,
+				12F9A9A726884FE20078F5F2 /* GitHub PeopleFinderTests */,
+				12F9A9B226884FE20078F5F2 /* GitHub PeopleFinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		12F9A99026884FE10078F5F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12F9A9A226884FE20078F5F2 /* LaunchScreen.storyboard in Resources */,
+				12F9A99F26884FE20078F5F2 /* Assets.xcassets in Resources */,
+				12F9A99D26884FE10078F5F2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12F9A9A626884FE20078F5F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12F9A9B126884FE20078F5F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AB5340AEF9D8C7D5E806DEDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHub PeopleFinder/Pods-GitHub PeopleFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHub PeopleFinder/Pods-GitHub PeopleFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHub PeopleFinder/Pods-GitHub PeopleFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C30DDC5A6EEDB6B8F62343C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GitHub PeopleFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		12F9A98E26884FE10078F5F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12F9A9D0268B3DD30078F5F2 /* Extension.swift in Sources */,
+				12F9A99A26884FE10078F5F2 /* ViewController.swift in Sources */,
+				12F9A9C62688A8EF0078F5F2 /* ResultsShowController.swift in Sources */,
+				12F9A99626884FE10078F5F2 /* AppDelegate.swift in Sources */,
+				12F9A9C82689C3EE0078F5F2 /* User.swift in Sources */,
+				12F9A99826884FE10078F5F2 /* SceneDelegate.swift in Sources */,
+				12F9A9CC268B0CC50078F5F2 /* SpinnerViewController.swift in Sources */,
+				12F9A9CA2689C7570078F5F2 /* Repository.swift in Sources */,
+				12F9A9CE268B35E20078F5F2 /* ReposTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12F9A9A426884FE20078F5F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12F9A9AD26884FE20078F5F2 /* GitHub_PeopleFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12F9A9AF26884FE20078F5F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12F9A9B826884FE20078F5F2 /* GitHub_PeopleFinderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		12F9A9AA26884FE20078F5F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12F9A99126884FE10078F5F2 /* GitHub PeopleFinder */;
+			targetProxy = 12F9A9A926884FE20078F5F2 /* PBXContainerItemProxy */;
+		};
+		12F9A9B526884FE20078F5F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12F9A99126884FE10078F5F2 /* GitHub PeopleFinder */;
+			targetProxy = 12F9A9B426884FE20078F5F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		12F9A99B26884FE10078F5F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12F9A99C26884FE10078F5F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		12F9A9A026884FE20078F5F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12F9A9A126884FE20078F5F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		12F9A9BA26884FE20078F5F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		12F9A9BB26884FE20078F5F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		12F9A9BD26884FE20078F5F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F8FEE88537E7C7EDB97C7FC /* Pods-GitHub PeopleFinder.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GitHub PeopleFinder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Natasha.GitHub-PeopleFinder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		12F9A9BE26884FE20078F5F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3455B1F238166DCFCCB4FAC8 /* Pods-GitHub PeopleFinder.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GitHub PeopleFinder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Natasha.GitHub-PeopleFinder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		12F9A9C026884FE20078F5F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GitHub PeopleFinderTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Natasha.GitHub-PeopleFinderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHub PeopleFinder.app/GitHub PeopleFinder";
+			};
+			name = Debug;
+		};
+		12F9A9C126884FE20078F5F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GitHub PeopleFinderTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Natasha.GitHub-PeopleFinderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHub PeopleFinder.app/GitHub PeopleFinder";
+			};
+			name = Release;
+		};
+		12F9A9C326884FE20078F5F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GitHub PeopleFinderUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Natasha.GitHub-PeopleFinderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GitHub PeopleFinder";
+			};
+			name = Debug;
+		};
+		12F9A9C426884FE20078F5F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GitHub PeopleFinderUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Natasha.GitHub-PeopleFinderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GitHub PeopleFinder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12F9A98D26884FE10078F5F2 /* Build configuration list for PBXProject "GitHub PeopleFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12F9A9BA26884FE20078F5F2 /* Debug */,
+				12F9A9BB26884FE20078F5F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12F9A9BC26884FE20078F5F2 /* Build configuration list for PBXNativeTarget "GitHub PeopleFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12F9A9BD26884FE20078F5F2 /* Debug */,
+				12F9A9BE26884FE20078F5F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12F9A9BF26884FE20078F5F2 /* Build configuration list for PBXNativeTarget "GitHub PeopleFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12F9A9C026884FE20078F5F2 /* Debug */,
+				12F9A9C126884FE20078F5F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12F9A9C226884FE20078F5F2 /* Build configuration list for PBXNativeTarget "GitHub PeopleFinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12F9A9C326884FE20078F5F2 /* Debug */,
+				12F9A9C426884FE20078F5F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 12F9A98A26884FE10078F5F2 /* Project object */;
+}
