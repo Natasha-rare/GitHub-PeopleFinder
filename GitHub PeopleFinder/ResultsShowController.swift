@@ -7,20 +7,17 @@
 
 import Foundation
 import UIKit
-import Alamofire
 
-class ResultsShowController: UIViewController, UITableViewDataSource {
+class ResultsShowController: UIViewController{
     
     var user:User = User()
-    let tableView = UITableView()
-    var reposCount:Int = 0
+    let tableView = UITableView.init(frame: .zero, style: UITableView.Style.grouped)
     var repos = Array<Repository>()
    
 //    var errorLb = UILabel()
     
     @IBOutlet weak var peopleIcon: UIImageView!
     @IBOutlet weak var userbio: UILabel!
-    @IBOutlet weak var scrollview: UIScrollView!
     @IBOutlet weak var avatarImg: UIImageView!
     @IBOutlet weak var followingLbl: UILabel!
     @IBOutlet weak var usernameLbl: UILabel!
@@ -48,24 +45,6 @@ class ResultsShowController: UIViewController, UITableViewDataSource {
     }
     
     public func FindPerson(name: String){
-//        Alamofire.request("https://api.github.com/users/\(name)").responseJSON {responseJSON in
-//            switch responseJSON.result {
-//            case .success(let value):
-//                print(value)
-////                guard let jsonResult = value as? Dictionary<[String: Any]> else { return }
-////                guard
-////                    let avatar = jsonResult["avatar_url"] as? String,
-////                    let followers = jsonResult["followers"] as? Int,
-////                    let following = jsonResult["following"] as? Int,
-////                    let bio = jsonResult["bio"] as? String
-////                else {return}
-////                self.user = User(name: name, avatar: avatar, followers:followers, following: following, bio: bio)
-////                self.loadContent()
-//            case .failure(let error):
-//                print(error)
-//            }
-        
-        
         guard let url = URL(string: "https://api.github.com/users/\(name)") else { return }
         let task = URLSession.shared.dataTask(with: url){
             (data, responce, error) in
@@ -85,6 +64,7 @@ class ResultsShowController: UIViewController, UITableViewDataSource {
                             var bio = jsonResult["bio"] as? String ?? ""
                             self.user = User(name: name, avatar: avatar, followers:followers, following: following, bio: bio)
                             self.loadContent()
+                            self.FindRepos(name: name)
                         }
                         else{
                             print("nothing found")
@@ -100,7 +80,7 @@ class ResultsShowController: UIViewController, UITableViewDataSource {
             }
         }
         task.resume()
-//        FindRepos(name: name)
+        
     }
     
     public func FindRepos(name: String){
@@ -111,11 +91,26 @@ class ResultsShowController: UIViewController, UITableViewDataSource {
                 self.usernameLbl.text = error?.localizedDescription
                 print(error!)
             }else{
-                print(data ?? "")
                 if let urlContent = data{
                     do{
-                        let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                        print(jsonResult)
+                        let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as? Array<[String: AnyObject]>
+                        print(jsonResult!)
+                        
+                        for jsonItem in jsonResult!{
+                            let repoName = jsonItem["name"] as? String ?? ""
+                            let private_repo = jsonItem["private"] as? Bool ?? true
+                            let lang = jsonItem["language"] as? String ?? ""
+                            let description = jsonItem["description"] as? String ?? ""
+                            let forks = jsonItem["forks_count"] as? Int ?? 0
+                            var repo = Repository(name: repoName, private_repo: private_repo, description: description, language: lang, forks: forks)
+                            self.repos.append(repo)
+                        }
+                        DispatchQueue.main.async {
+                            print(self.repos.count)
+                            print(self.repos)
+                            self.loadTable()
+                            
+                        }
                         
                     } catch{
                         print("JSON processing error")
@@ -150,43 +145,23 @@ class ResultsShowController: UIViewController, UITableViewDataSource {
     }
     
     func loadTable(){
-        tableView.frame = CGRect(x: 8, y: 128, width: UIScreen.main.bounds.width - 16, height: UIScreen.main.bounds.height)
-        tableView.register(ReposTableViewCell.self, forCellReuseIdentifier: "ReposTableViewCell")
-        tableView.dataSource = self
-        tableView.backgroundColor = view.backgroundColor
-        tableView.separatorStyle = .singleLine
-        tableView.tableFooterView = UIView(frame: .zero)
-        tableView.rowHeight = 60
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.frame = CGRect(x: 8, y: 300, width: UIScreen.main.bounds.width - 16, height: UIScreen.main.bounds.height - 200)
+        self.tableView.register(ReposTableViewCell.self, forCellReuseIdentifier: "ReposTableViewCell")
+        self.tableView.backgroundColor = view.backgroundColor
+        self.tableView.separatorStyle = .singleLine
+        self.tableView.tableFooterView = UIView(frame: .zero)
+        self.tableView.rowHeight = 76
         
-        tableView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(self.reposCount * 60 + 100))
-        super.view.addSubview(tableView)
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-            var cell = ReposTableViewCell()
-        cell = self.tableView.dequeueReusableCell(withIdentifier: "ReposTableViewCell", for: indexPath) as! ReposTableViewCell
-        cell.reposDescriptionLbl.text = self.repos[indexPath.row].description
-        cell.reposNameLbl.text = self.repos[indexPath.row].name
-        cell.reposSizeLbl.text = String(self.repos[indexPath.row].size)
-        cell.reposForksLbl.text = String(self.repos[indexPath.row].private_repo)
-        cell.reposLangLbl.text = self.repos[indexPath.row].language
-        return cell
-    }
-        
-        
-   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       switch tableView {
-       case self.tableView:
-          return self.reposCount
-        default:
-          return 0
-       }
+        self.tableView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(self.repos.count * 76 + 100))
+//        self.registerTableViewCells()
+        self.tableView.reloadData()
+        super.view.addSubview(self.tableView)
     }
     
     func createSpinnerView() {
         let child = SpinnerViewController()
-
         // add the spinner view controller
         addChild(child)
         child.view.frame = view.frame
@@ -218,3 +193,31 @@ class ResultsShowController: UIViewController, UITableViewDataSource {
 //       }
 }
 
+extension ResultsShowController: UITableViewDelegate, UITableViewDataSource
+{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = ReposTableViewCell()
+        cell = self.tableView.dequeueReusableCell(withIdentifier: "ReposTableViewCell", for: indexPath) as! ReposTableViewCell
+        print(self.repos[indexPath.row].name, "hvbjn")
+        cell.reposDescriptionLbl?.text = self.repos[indexPath.row].description
+        cell.reposNamelbl?.text = self.repos[indexPath.row].name
+        cell.reposForksLbl?.text = String(self.repos[indexPath.row].forks)
+        cell.reposPrivateLbl?.text = String(self.repos[indexPath.row].private_repo)
+        cell.reposLangLbl?.text = self.repos[indexPath.row].language
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repo = self.repos[indexPath.row]
+        print(repo.name, indexPath.row)
+    }
+        
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       switch tableView {
+       case self.tableView:
+          return self.repos.count
+        default:
+          return 0
+       }
+    }
+}

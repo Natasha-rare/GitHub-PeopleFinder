@@ -13,13 +13,13 @@ class Repository{
     let private_repo: Bool
     let description: String
     let language: String?
-    let size: Int
+    let forks: Int
     
-    init(name:String, private_repo: Bool, description: String, language: String, size: Int) {
+    init(name:String, private_repo: Bool, description: String, language: String, forks: Int) {
         self.name = name
         self.private_repo = private_repo
         self.description = description
         self.language = language
-        self.size = size
+        self.forks = forks
     }
 }
