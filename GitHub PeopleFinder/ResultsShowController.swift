@@ -12,6 +12,7 @@ class ResultsShowController: UIViewController{
     
     var user:User = User()
     let tableView = UITableView.init(frame: .zero, style: UITableView.Style.grouped)
+//    let tableView = UITableView()
     var repos = Array<Repository>()
    
 //    var errorLb = UILabel()
@@ -36,6 +37,8 @@ class ResultsShowController: UIViewController{
     }
     
     public func clearAll(){
+        self.repos.removeAll()
+        self.tableView.reloadData()
         self.usernameLbl.text = ""
         self.userbio.text = ""
         self.avatarImg.image = nil
@@ -84,6 +87,7 @@ class ResultsShowController: UIViewController{
     }
     
     public func FindRepos(name: String){
+        self.repos = Array<Repository>()
         let url = URL(string: "https://api.github.com/users/\(name)/repos")
         let task = URLSession.shared.dataTask(with: url!){
             (data, responce, error) in
@@ -117,14 +121,33 @@ class ResultsShowController: UIViewController{
                     }
                 }
             }
-        
         }
         task.resume()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+            //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+            //tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+
         self.createSpinnerView()
+    }
+    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+        let name = self.usernameTF.text!
+        if name.count > 0 { self.FindPerson(name: name)}
+        else{
+            self.usernameLbl.text = "Name can't be empty"
+        }
+        return false
     }
     
     func loadContent(){
@@ -147,15 +170,14 @@ class ResultsShowController: UIViewController{
     func loadTable(){
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.frame = CGRect(x: 8, y: 300, width: UIScreen.main.bounds.width - 16, height: UIScreen.main.bounds.height - 200)
+        self.tableView.frame = CGRect(x: 8, y: 330, width: UIScreen.main.bounds.width - 10, height: UIScreen.main.bounds.height - 330)
         self.tableView.register(ReposTableViewCell.self, forCellReuseIdentifier: "ReposTableViewCell")
         self.tableView.backgroundColor = view.backgroundColor
         self.tableView.separatorStyle = .singleLine
         self.tableView.tableFooterView = UIView(frame: .zero)
-        self.tableView.rowHeight = 76
+        self.tableView.rowHeight = 80
         
-        self.tableView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(self.repos.count * 76 + 100))
-//        self.registerTableViewCells()
+        self.tableView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: CGFloat(self.repos.count * 80 + 180))
         self.tableView.reloadData()
         super.view.addSubview(self.tableView)
     }
@@ -178,19 +200,6 @@ class ResultsShowController: UIViewController{
     }
     
     
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//           var cell = TableViewCell()
-//           cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-//           cell.textLabel?.text = groceryIngridients[indexPath.row]
-//           cell.btn.setImage(UIImage(named: "check-box.png"), for: .normal)
-//           cell.btn.layer.borderColor = UIColor.black.cgColor
-//           cell.btn.anchor(top: cell.topAnchor, left: cell.leftAnchor, bottom: cell.bottomAnchor, right: nil, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 0, width: 25, height: 0, enableInsets: false)
-//           cell.textLabel!.anchor(top: cell.topAnchor, left: cell.btn.rightAnchor, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 30, paddingBottom: 0, paddingRight: 0, width: CGFloat(UIScreen.main.bounds.width - 76), height: 0, enableInsets: false)
-//   //        cell.textLabel?.frame = CGRect(x: 60, y: 5, width: Int(UIScreen.main.bounds.width - 76), height: 30)
-//           cell.btn.addTarget(self, action: #selector(imageTapped(_:)), for: .touchDown)
-//           cell.layoutSubviews()
-//           return cell
-//       }
 }
 
 extension ResultsShowController: UITableViewDelegate, UITableViewDataSource
@@ -198,12 +207,12 @@ extension ResultsShowController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = ReposTableViewCell()
         cell = self.tableView.dequeueReusableCell(withIdentifier: "ReposTableViewCell", for: indexPath) as! ReposTableViewCell
-        print(self.repos[indexPath.row].name, "hvbjn")
-        cell.reposDescriptionLbl?.text = self.repos[indexPath.row].description
-        cell.reposNamelbl?.text = self.repos[indexPath.row].name
-        cell.reposForksLbl?.text = String(self.repos[indexPath.row].forks)
-        cell.reposPrivateLbl?.text = String(self.repos[indexPath.row].private_repo)
-        cell.reposLangLbl?.text = self.repos[indexPath.row].language
+        cell.reposDescriptionLbl.text = self.repos[indexPath.row].description
+        cell.reposNamelbl.text = self.repos[indexPath.row].name
+        print(cell.reposNamelbl.text, "fewfe3f")
+        cell.reposForksLbl.text =   "⭐️ \(self.repos[indexPath.row].forks)"
+        cell.reposPrivateLbl.text =  "🔒 \(self.repos[indexPath.row].private_repo ? "Private":"Public")"
+        cell.reposLangLbl.text = "💻 \(self.repos[indexPath.row].language!)"
         return cell
     }
 
